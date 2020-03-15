@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-title>Sign Up</mat-card-title>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Type Your Email</mat-label>
+    <input [(ngModel)]="email" autocomplete="off" matInput placeholder="example@mail.ru">
+    <mat-icon matSuffix>mail</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input [(ngModel)]="displayName" matInput >
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input [(ngModel)]="displayName" matInput >
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your password</mat-label>
+    <input type="password" [(ngModel)]="pass" autocomplete="off" matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Reset password</mat-label>
+    <input type="password" [(ngModel)]="passRep" matInput >
+  </mat-form-field>
+
+
+  <button class="bt" mat-button (click)="register()">Sign Up</button>
+
+</mat-card>

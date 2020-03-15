@@ -1,0 +1,45 @@
+<!--<button mat-button [matMenuTriggerFor]="menu">Menu</button>-->
+<!--<mat-menu #menu="matMenu">-->
+<!--  <button mat-menu-item>Item 1</button>-->
+<!--  <button mat-menu-item>Item 2</button>-->
+<!--</mat-menu>-->
+
+
+<mat-toolbar>
+<mat-icon [routerLink]="'home'" >home</mat-icon>
+<label>Vote List</label>
+<label>Available Chats</label>
+
+  <mat-form-field appearance="standard">
+    <mat-label>Select Language</mat-label>
+    <mat-select>
+      <mat-option>
+
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="ModeSelect">
+    <mat-form-field appearance="standard">
+      <mat-label>Select Mode</mat-label>
+      <mat-select>
+        <mat-option>
+
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <div class="NotLogged" *ngIf="!authService.isLoggedIn">
+    <button mat-button [routerLink]="'/auth/login'">Log in</button>
+    <button mat-button  [routerLink]="'/auth/register'" style="background-color:  rgba(41,47,56,0.88); color: whitesmoke">Sign up</button>
+
+
+  </div>
+
+  <div *ngIf="authService.isLoggedIn" class="Logged">
+    <button (click)="authService.logout()" mat-button>Log out{{this.authService.user.displayName}}</button>
+  </div>
+
+</mat-toolbar>

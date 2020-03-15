@@ -1,0 +1,58 @@
+mat-toolbar{
+  background-color: rgba(38, 43, 51, 0.56);
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+mat-toolbar mat-icon{
+  user-select: none;
+
+  transform: scale(2);
+  color: rgba(255, 255, 255, 0.66);
+}
+
+mat-toolbar label{
+  color: rgba(255, 255, 255, 0.66);
+  user-select: none;
+}
+
+mat-toolbar mat-select{
+  color: rgba(151, 151, 151, 0.8);
+
+}
+
+/deep/ .mat-select-panel {
+  color: rgba(151, 151, 151, 0.51);
+}
+/deep/ .mat-form-field-type-mat-select .mat-form-field-label, .mat-select-value {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+mat-toolbar mat-form-field{
+  user-select: none;
+  width: 10%;
+}
+
+
+
+
+.ModeSelect mat-form-field{
+  width: 100%;
+
+}
+
+
+.NotLogged button{
+  background-color: rgba(255, 255, 255, 0.45);
+  margin-right: 7%;
+}
+
+.NotLogged{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 20%;
+}
