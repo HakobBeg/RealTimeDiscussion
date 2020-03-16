@@ -1,0 +1,83 @@
+.DialogBox{
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  position: relative;
+  top: 200px;
+  height: 700px;
+  background-color: rgba(104, 123, 145, 0.59);;
+}
+
+.chatForm{
+  background-color: rgba(47, 67, 73, 0.76);
+  height: 10%;
+  width: 100%;
+
+}
+
+.chatForm mat-form-field{
+  width: 80%;
+  height: 10%;
+  color: whitesmoke;
+}
+.chatForm button{
+  margin-left: 5%;
+  width: 10%;
+  height: 100%;
+}
+
+.dialog{
+  width:  98%;
+  height: 100%;
+  overflow-y: scroll;
+
+}
+
+.dialogContainer{
+  width: 98%;
+  height: 80%;
+  margin-bottom: 10px ;
+  background-color: rgba(58, 83, 91, 0.64);
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: whitesmoke !important;
+  font-size: 120%;
+}
+.mat-form-field mat-label{
+  color: rgba(230,230,230,0.41);
+  font-size: 130%;
+  font-family: Tahoma;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: rgba(123, 184, 195, 0.64) !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: whitesmoke !important;;
+}
+
+.messagecontent{
+
+}
+
+.OwnMessageCont{
+  width: 40%;
+  margin-left: 60%;
+}
+
+.MessageCont{
+  width: 40%;
+
+}
+

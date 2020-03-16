@@ -17,5 +17,6 @@
   </mat-form-field>
 
   <button class="bt" mat-button (click)="signIn()">LogIn</button>
-
+  <label  (click)="this.authService.router.navigate(['auth/register'])">Haven't account yet?</label>
+  <button mat-button [routerLink]="'/home'"><mat-icon>home</mat-icon></button>
 </mat-card>

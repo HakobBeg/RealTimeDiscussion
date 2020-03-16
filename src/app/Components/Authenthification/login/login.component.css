@@ -19,3 +19,13 @@ mat-form-field{
 .bt{
   background-color: rgba(206,197,200,0.8)
 }
+
+label{
+  margin-top: 4px;
+  font-size: 120%;
+  color: rgba(172, 164, 167, 0.78);
+}
+
+label:hover{
+  color: black;
+}

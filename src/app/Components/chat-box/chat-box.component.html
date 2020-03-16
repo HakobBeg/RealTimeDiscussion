@@ -1,0 +1,20 @@
+<mat-card class="DialogBox">
+<mat-card class="dialogContainer">
+  <div #dialog  class="dialog" [scrollTop]="dialog.scrollHeight">
+    <div *ngFor="let message of messages"  [class.OwnMessageCont]="authSv.user.displayName === message.uId" [class.MessageCont]="authSv .user.displayName !== message.uId">
+      <app-message class="messagecontent" [message]="message"></app-message>
+    </div>
+  </div>
+</mat-card>
+
+  <form class="chatForm"  [formGroup]="chatForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Type Your Message....</mat-label>
+      <input formControlName="message"  matInput #message maxlength="256" autocomplete="off" placeholder="Ex. I need help with...">
+      <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+    </mat-form-field>
+    <button mat-button (click)="onMessageSubmit()">Submit</button>
+  </form>
+</mat-card>
+
+

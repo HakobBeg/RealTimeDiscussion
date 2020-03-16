@@ -1,21 +1,45 @@
-mat-card{
+mat-card {
   width: 30%;
   height: auto;
-  top:200px;
+  top: 200px;
   margin-left: 35%;
   margin-right: 35%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+
   background-color: rgba(172, 172, 172, 0.58);
   border-radius: 20px;
 }
 
-mat-form-field{
+mat-form-field {
   width: 90%;
 }
 
-.bt{
-  background-color: rgba(206,197,200,0.8)
+.bt {
+  background-color: rgba(206, 197, 200, 0.8)
+}
+
+mat-card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.NonValidP {
+  color: whitesmoke;
+  background-color: #F35454;
+  font-family: Tahoma;
+}
+
+form label{
+  margin-top: 4px;
+  font-size: 120%;
+  color: rgba(172, 164, 167, 0.78);
+}
+
+
+form label:hover{
+  color: black;
 }

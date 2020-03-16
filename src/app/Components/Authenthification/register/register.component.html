@@ -1,34 +1,41 @@
 <mat-card>
   <mat-card-title>Sign Up</mat-card-title>
-
+<form [formGroup]="regForm" >
   <mat-form-field appearance="outline">
     <mat-label>Type Your Email</mat-label>
-    <input [(ngModel)]="email" autocomplete="off" matInput placeholder="example@mail.ru">
+    <input formControlName="email" autocomplete="off" matInput placeholder="example@mail.ru">
     <mat-icon matSuffix>mail</mat-icon>
   </mat-form-field>
+  <p *ngIf="regForm.get('email').invalid && regForm.get('email').touched" class="NonValidP" >Please enter valid email adress.</p>
 
   <mat-form-field appearance="outline">
     <mat-label>First Name</mat-label>
-    <input [(ngModel)]="displayName" matInput >
+    <input formControlName="firstName"  matInput >
   </mat-form-field>
+  <p *ngIf="regForm.get('firstName').invalid && regForm.get('firstName').touched" class="NonValidP" >What's your Name?</p>
 
   <mat-form-field appearance="outline">
     <mat-label>Last Name</mat-label>
-    <input [(ngModel)]="displayName" matInput >
+    <input formControlName="lastName" matInput >
   </mat-form-field>
+  <p *ngIf="regForm.get('lastName').invalid && regForm.get('lastName').touched" class="NonValidP" >What's your last Name?</p>
 
 
   <mat-form-field appearance="outline">
     <mat-label>Enter your password</mat-label>
-    <input type="password" [(ngModel)]="pass" autocomplete="off" matInput>
+    <input formControlName="password" type="password"  matInput>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <mat-label>Reset password</mat-label>
-    <input type="password" [(ngModel)]="passRep" matInput >
+    <mat-label>Confirm password</mat-label>
+    <input formControlName="repPassword" type="password" matInput >
   </mat-form-field>
+  <p class="NonValidP" *ngIf="regForm.get('password').value !== regForm.get('repPassword').value && regForm.get('repPassword').touched">Passwords don't match.</p>
 
 
-  <button class="bt" mat-button (click)="register()">Sign Up</button>
+  <button class="bt" [disabled]="regForm.invalid" mat-button (click)="onSubmit()">Sign Up</button>
+  <label (click)="this.authService.router.navigate(['auth/login'])">Already have account?</label>
+  <button mat-button [routerLink]="'/home'"><mat-icon>home</mat-icon></button>
+</form>
 
 </mat-card>

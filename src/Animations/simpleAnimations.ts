@@ -13,3 +13,12 @@ export const startAnimationTrigger = trigger('startAnimationTrigger', [
 
 ]);
 
+
+export const navbarAnimationtrigger = trigger('navAnimateTrigger', [
+  state('fullSc', style({width: '100vw'})),
+  state('zero', style({width: '0vw'})),
+
+  transition('void => fullSc', animate(400)),
+
+
+]);

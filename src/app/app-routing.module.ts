@@ -5,6 +5,7 @@ import {RegisterComponent} from './Components/Authenthification/register/registe
 import {AuthenthifyComponent} from './Components/Authenthification/authenthify/authenthify.component';
 import {HomePageComponent} from './Components/home-page/home-page.component';
 import {StartPageComponent} from './Components/start-page/start-page.component';
+import {ChatBoxComponent} from './Components/chat-box/chat-box.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,11 @@ const routes: Routes = [
     ]
   },
 
-  {path: 'home', component: HomePageComponent},
+  {
+    path: 'home', component: HomePageComponent, children: [
+      {path: 'chat', component: ChatBoxComponent}
+    ]
+  },
   {path: '', component: StartPageComponent}
 ];
 

@@ -10,11 +10,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule, MatIconModule, MatInputModule, MatMenuModule, MatSelectModule, MatToolbarModule} from '@angular/material';
 import {AngularFireAuthModule} from '@angular/fire/auth';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AuthenthifyComponent } from './Components/Authenthification/authenthify/authenthify.component';
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { StartPageComponent } from './Components/start-page/start-page.component';
-
+import { ChatBoxComponent } from './Components/chat-box/chat-box.component';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { MessageComponent } from './Components/message/message.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { StartPageComponent } from './Components/start-page/start-page.component
     RegisterComponent,
     AuthenthifyComponent,
     HomePageComponent,
-    StartPageComponent
+    StartPageComponent,
+    ChatBoxComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { StartPageComponent } from './Components/start-page/start-page.component
     AngularFireAuthModule,
     FormsModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    ReactiveFormsModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

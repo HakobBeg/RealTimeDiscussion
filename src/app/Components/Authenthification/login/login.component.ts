@@ -12,11 +12,11 @@ export class LoginComponent implements OnInit {
   login: string;
   pass: string;
 
-  constructor(private authService: AuthService) {
+  constructor(public authService: AuthService) {
   }
 
   signIn() {
-      this.authService.login(this.login, this.pass);
+    this.authService.login(this.login, this.pass).then(() => this.authService.router.navigate(['home']));
   }
 
 
